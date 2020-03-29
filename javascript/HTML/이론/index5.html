@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dume</title>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: blue;
+      }
+      body {
+        height: 400%;
+        background-color: red;
+      }
+      #box {
+        height: 300px;
+        width: 300px;
+        background-color: yellow;
+        position: static;
+        /* static : 브라우저에 고정되어 있다고 생각(디폴트값) */
+      }
+      #box2 {
+        height: 300px;
+        width: 300px;
+        background-color: green;
+        position: fixed;
+        /* fixed : 화면에 고정되어 있다고 생각 */
+        bottom: 50%;
+        left: 0;
+      }
+      .box3 {
+        width: 400px;
+        height: 400px;
+        background-color: pink;
+        position: relative;
+      }
+      .box3-child {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: absolute;
+        /* absolute : 부모의 포지션(relative)를 따라감. relative 포지션이 없을 경우 본문 body에 맞춰 포지션이 결정 */
+        right: 10px;
+        top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <div class="box-child"></div>
+    </div>
+    <div id="box2">
+      <div class="box-child"></div>
+    </div>
+    <div class="box3">
+      <div class="box3-child"></div>
+    </div>
+  </body>
+</html>
