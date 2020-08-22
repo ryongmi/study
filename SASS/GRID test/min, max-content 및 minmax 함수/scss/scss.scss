@@ -1,0 +1,54 @@
+.container {
+  width: 1000px;
+  margin: 30px auto;
+  background-color: #ddd;
+
+  display: grid;
+  /*
+  grid-template-rows: repeat(2, 150px);
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: max-content 1fr 1fr min-content;
+  // max-content : 열 중에 제일 큰 사이즈로 트랙 생성
+  // min-content : 열 중에 작은 사이즈로 트랙 생성 ?
+  grid-template-rows: repeat(2, minmax(150px, min-content));
+  // minmax(150px, min-content) : 150px ~ min-content 사이의 크기를 가짐.
+  */
+
+  width: 90%;
+  grid-template-rows: repeat(2, minmax(150px, min-content));
+  grid-template-columns: minmax(200px, 50%) repeat(3, 1fr);
+  // minmax(200px, 50%) : 트랙의 크기가 200px ~ 그리드 크기의 50% 사이의 값을 가짐.
+
+  .item {
+    padding: 20px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 30px;
+    background-color: orangered;
+
+    &--1 {
+      background-color: orangered;
+    }
+    &--2 {
+      background-color: yellowgreen;
+    }
+    &--3 {
+      background-color: blueviolet;
+    }
+    &--4 {
+      background-color: palevioletred;
+    }
+    &--5 {
+      background-color: royalblue;
+    }
+    &--6 {
+      background-color: goldenrod;
+    }
+    &--7 {
+      background-color: crimson;
+    }
+    &--8 {
+      background-color: darkslategray;
+    }
+  }
+}
